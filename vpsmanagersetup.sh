@@ -100,13 +100,13 @@ fi
 if [ -d "/etc/squid3/" ]
 then
         tput setaf 3 ; tput bold ; echo "Configurando o squid3..." ; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/squid1.txt -O /tmp/sqd1 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/squid1.txt -O /tmp/sqd1 1> /dev/null 2> /dev/stdout
 	echo "acl url3 dstdomain -i $ipdovps" > /tmp/sqd2
-	wget http://keeptunnel.com.br/vpsmanager/squid2.txt -O /tmp/sqd3 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/squid2.txt -O /tmp/sqd3 1> /dev/null 2> /dev/stdout
 	cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 > /etc/squid3/squid.conf
         sleep 2
         tput setaf 6 ; tput bold ; echo "Configurando Hosts das payloads..." ; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/payload.txt -O /etc/squid3/payload.txt 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/payload.txt -O /etc/squid3/payload.txt 1> /dev/null 2> /dev/stdout
 	echo " " >> /etc/squid3/payload.txt
 
         tput setaf 4 ; tput bold ; echo "Configurando SSH..." ; tput sgr0
@@ -118,89 +118,131 @@ then
         tput setaf 7 ; tput setab 4 ; tput bold ; echo "Preparando configuração dos comandos de gerenciamento de usuários. Por favor aguarde..." ; tput sgr0
         sleep 2
         tput setaf 3 ; tput bold ; echo "Adicionando comando addhost"; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/scripts/addhost.sh -O /bin/addhost 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/addhost.sh -O /bin/addhost 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/addhost
         sleep 1
         tput setaf 5 ; tput bold ; echo "Adicionando comando alterarsenha"; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/scripts/alterarsenha.sh -O /bin/alterarsenha 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/alterarsenha.sh -O /bin/alterarsenha 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/alterarsenha
         sleep 1
         tput setaf 3 ; tput bold ; echo "Adicionando comando criarusuario"; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/scripts/criarusuario2.sh -O /bin/criarusuario 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/criarusuario2.sh -O /bin/criarusuario 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/criarusuario
         sleep 1
         tput setaf 1 ; tput bold ; echo "Adicionando comando delhost"; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/scripts/delhost.sh -O /bin/delhost 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/delhost.sh -O /bin/delhost 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/delhost
         sleep 1
         tput setaf 1 ; tput bold ; echo "Adicionando comando expcleaner"; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/scripts/expcleaner2.sh -O /bin/expcleaner 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/expcleaner2.sh -O /bin/expcleaner 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/expcleaner
         sleep 1
         tput setaf 3 ; tput bold ; echo "Adicionando comando mudardata"; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/scripts/mudardata.sh -O /bin/mudardata 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/mudardata.sh -O /bin/mudardata 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/mudardata
         sleep 1
         tput setaf 1 ; tput bold ; echo "Adicionando comando expcleaner"; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/scripts/remover.sh -O /bin/remover 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/remover.sh -O /bin/remover 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/remover
         sleep 1
         tput setaf 1 ; tput bold ; echo "Adicionando comando sshlimiter"; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/scripts/sshlimiter2.sh -O /bin/sshlimiter 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/sshlimiter2.sh -O /bin/sshlimiter 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/sshlimiter
         sleep 1
         tput setaf 3 ; tput bold ; echo "Adicionando comando alterarlimite"; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/scripts/alterarlimite.sh -O /bin/alterarlimite 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/alterarlimite.sh -O /bin/alterarlimite 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/alterarlimite
         sleep 1
         tput setaf 2 ; tput bold ; echo "Adicionando comando ajuda"; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/scripts/ajuda.sh -O /bin/ajuda 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/ajuda.sh -O /bin/ajuda 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/ajuda
         sleep 1
         tput setaf 3 ; tput bold ; echo "Adicionando comando sshmonitor"; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/scripts/sshmonitor.sh -O /bin/sshmonitor 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/sshmonitor2.sh -O /bin/sshmonitor 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/sshmonitor
         sleep 1
         tput setaf 2 ; tput bold ; echo "Adicionando comando badvpnsetup , para liberar chamada de WhatsApp,jogos e ETC.."; tput sgr0
-        wget http://keeptunnel.com.br/vpsmanager/scripts/badvpnsetup.sh -O /bin/badvpnsetup 1> /dev/null 2> /dev/stdout
+        wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/badvpnsetup.sh -O /bin/badvpnsetup 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/badvpnsetup
         sleep 1
         tput setaf 4 ; tput bold ; echo "Adicionando comando tcptweaker, execulte para diminuir o ping do servidor.."; tput sgr0
-        wget http://keeptunnel.com.br/vpsmanager/scripts/tcptweaker.sh -O /bin/tcptweaker 1> /dev/null 2> /dev/stdout
+        wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/tcptweaker.sh -O /bin/tcptweaker 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/tcptweaker
         sleep 2
         tput setaf 4 ; tput bold ; echo "Adicionando comando userbackup, para salvar todos os usuários criados..."; tput sgr0
-        wget http://keeptunnel.com.br/vpsmanager/scripts/userbackup.sh -O /bin/userbackup 1> /dev/null 2> /dev/stdout
+        wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/userbackup.sh -O /bin/userbackup 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/userbackup
         sleep 2
         tput setaf 2 ; tput bold ; echo "Adicionando comando openvpnsetup, para instalar o OpenVPN..."; tput sgr0
-        wget http://keeptunnel.com.br/vpsmanager/scripts/openvpnsetup.sh -O /bin/openvpnsetup 1> /dev/null 2> /dev/stdout
+        wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/openvpnsetup.sh -O /bin/openvpnsetup 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/openvpnsetup
         sleep 4
         tput setaf 2 ; tput bold ; echo "Adicionando comando otimizar, para fazer otimização do sistema..."; tput sgr0
-        wget http://keeptunnel.com.br/vpsmanager/scripts/otimizar.sh -O /bin/otimizar 1> /dev/null 2> /dev/stdout
+        wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/otimizar2.sh -O /bin/otimizar 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/otimizar
         sleep 3
         tput setaf 7 ; tput bold ; echo "Adicionando comando speedtest, para medir a velocidade do servidor."; tput sgr0
-        wget http://keeptunnel.com.br/vpsmanager/scripts/speedtest.sh -O /bin/speedtest 1> /dev/null 2> /dev/stdout
+        wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/speedtest.sh -O /bin/speedtest 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/speedtest
         sleep 1
         tput setaf 3 ; tput bold ; echo "Adicionando comando detalhes, para ver as configurações do servidor..."; tput sgr0
-        wget http://keeptunnel.com.br/vpsmanager/scripts/detalhes.sh -O /bin/detalhes 1> /dev/null 2> /dev/stdout
+        wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/detalhes.sh -O /bin/detalhes 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/detalhes
         sleep 1
-        tput setaf 5 ; tput bold ; echo "Instalando comando limitar, para derrubar usuários que ultrapassam o limite a cada 5 minutos..." ; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/scripts/limitar -O /bin/limitar 1> /dev/null 2> /dev/stdout
+        tput setaf 5 ; tput bold ; echo "Instalando comando para bloquear o Torrent" ; tput sgr0
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/iptables -O /bin/iptables 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/limitar
         sleep 2
         tput setaf 2 ; tput bold ; echo "Instalando comando logins, para ver quantos estão conectados..." ; tput sgr0
-	wget http://keeptunnel.com.br/vpsmanager/scripts/logins.sh -O /bin/logins 1> /dev/null 2> /dev/stdout
+	wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/logins.sh -O /bin/logins 1> /dev/null 2> /dev/stdout
 	chmod +x /bin/logins
         sleep 2
         tput setaf 3 ; tput bold ; echo "Instalando comando sshmonitor2 para monitorar usuários (com data)..." ; tput sgr0
-        wget http://keeptunnel.com.br/vpsmanager/scripts/sshmonitor2.sh -O /bin/sshmonitor2 1> /dev/null 2> /dev/stdout
+        wget https://raw.githubusercontent.com/L0rdDark/vpsmanager/master/sshmonitor2.sh -O /bin/sshmonitor2 1> /dev/null 2> /dev/stdout
         chmod +x /bin/sshmonitor2
         sleep 2
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
         
 	if [ ! -f "/etc/init.d/squid3" ]
 	then
