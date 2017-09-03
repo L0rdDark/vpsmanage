@@ -23,7 +23,7 @@ tput setaf 2 ; tput bold ; printf '%s' "speedtest" ; tput setaf 7 ; printf '%s' 
 tput sgr0
 tput setaf 2 ; tput bold ; printf '%s' "otimizar" ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Atualizar pacotes, limpar memória RAM e cache" ; echo ""
 tput sgr0
+tput setaf 2 ; tput bold ; printf '%s' "iptables" ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Bloquear o Torrent" ; echo ""
 tput setaf 2 ; tput bold ; printf '%s' "detalhes" ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Informações do servidor (Uptime, RAM etc)" ; echo ""
-tput setaf 2 ; tput bold ; printf '%s' "limitar " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Limitador de conexões SSH simultâneas a cada 2 minutos(deve ser executado em uma sessão screen)" ; echo ""
 tput setaf 2 ; tput bold ; printf '%s' "logins " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Mostrar quantidade de logins conectados" ; echo ""
 tput sgr0
