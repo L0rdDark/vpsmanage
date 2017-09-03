@@ -1,0 +1,5 @@
+#!/bin/bash
+awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > /root/usuarios.db
+database="/root/usuarios.db"
+
+tput setaf 2 ; tput bold ; echo ""; echo "VocÃª alterou todos os usuÃ¡rios para 1 conexÃ£o" ; tput sgr0
